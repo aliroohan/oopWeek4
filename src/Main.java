@@ -1,15 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        SavingsAccount saver1 = new SavingsAccount();
+        SavingsAccount saver2 = new SavingsAccount();
+        saver1.setSavingsBalance(2000.00);
+        saver2.setSavingsBalance(3000.00);
+        SavingsAccount.modifyInterestRate(0.03);
+        saver1.calculateMonthlyInterest();
+        saver2.calculateMonthlyInterest();
+        System.out.println("Saver 1: " + saver1.getSavingsBalance());
+        System.out.println("Saver 2: " + saver2.getSavingsBalance());
+        SavingsAccount.modifyInterestRate(0.0);
+        saver1.calculateMonthlyInterest();
+        saver2.calculateMonthlyInterest();
+        System.out.println("Saver 1: " + saver1.getSavingsBalance());
+        System.out.println("Saver 2: " + saver2.getSavingsBalance());
     }
+
 }
