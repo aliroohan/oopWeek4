@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class GuessTheWordLevelTwo {
+public class GuessTheWordLevelTwo {
+    static void levelTwo(){
+        System.out.println("You are Now at LEVEL 2");
+    }
 }
