@@ -1,5 +1,5 @@
 public class SavingsAccount {
-    static double annualInterestRate;
+    private static double annualInterestRate;
     private double savingsBalance;
 
     public static double getAnnualInterestRate() {
@@ -23,6 +23,7 @@ public class SavingsAccount {
         savingsBalance += interest;
     }
     static void modifyInterestRate(double newRate) {
+
         annualInterestRate = newRate;
     }
 }
